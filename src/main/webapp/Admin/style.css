@@ -1,0 +1,361 @@
+/* Lumina Admin Theme - Black & Orange */
+:root {
+    --bg-dark: #0a0a0a;
+    --sidebar-bg: #121212;
+    --accent-orange: #ff6600;
+    --accent-glow: rgba(255, 102, 0, 0.3);
+    --card-bg: #1e1e1e;
+    --text-muted: #888888;
+}
+
+body.admin-dashboard {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Stylized Sidebar */
+.admin-sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    height: 100vh;
+    border-right: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.sidebar-brand {
+    padding: 40px 30px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-item-stylized {
+    padding: 15px 30px;
+    margin: 8px 15px;
+    border-radius: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-item-stylized:hover {
+    color: white;
+    background: rgba(255, 102, 0, 0.05);
+}
+
+.nav-item-stylized.active {
+    background: var(--accent-orange);
+    color: #000;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* Stylized Summary Cards */
+.summary-card-bespoke {
+    background: var(--card-bg);
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.summary-card-bespoke:hover {
+    border-color: var(--accent-orange);
+}
+
+.card-icon-accent {
+    font-size: 2rem;
+    color: var(--accent-orange);
+    margin-bottom: 15px;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+/* Time Filter Buttons */
+.time-filter-group {
+    background: #121212;
+    padding: 5px;
+    border-radius: 12px;
+    display: inline-flex;
+    border: 1px solid #222;
+}
+
+.filter-btn {
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--accent-orange);
+    color: #000;
+}
+
+/* Chart and Featured Area */
+.chart-container {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #2a2a2a;
+    height: 300px;
+}
+
+.featured-book-card {
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    border: 1px solid var(--accent-orange);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.featured-book-img {
+    width: 80px;
+    height: 110px;
+    background: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* User Management Specific Styles */
+.mgmt-container {
+    background: var(--card-bg);
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 0; /* Table will handle internal padding */
+    overflow: hidden;
+}
+
+.mgmt-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mgmt-table {
+    width: 100%;
+    margin-bottom: 0;
+    color: white;
+}
+
+.mgmt-table thead {
+    background: #121212;
+}
+
+.mgmt-table th {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border: none;
+}
+
+.mgmt-table td {
+    padding: 20px 30px;
+    border-bottom: 1px solid #2a2a2a;
+    vertical-align: middle;
+}
+
+/* User Status Badges */
+.status-pill {
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background: rgba(0, 255, 127, 0.1);
+    color: #00ff7f;
+    border: 1px solid rgba(0, 255, 127, 0.2);
+}
+.status-pending {
+    background: rgba(255, 234, 0, 0.1);
+    color: #ffd500;
+    border: 1px solid rgba(247, 255, 0, 0.2);
+}
+
+.status-blocked {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff4d4d;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+/* Search & Action */
+.search-input-stylized {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 300px;
+}
+
+.search-input-stylized:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.action-btn-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: transparent;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.action-btn-circle:hover {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+}
+
+/* Book Management Specifics */
+.book-thumbnail-admin {
+    width: 50px;
+    height: 70px;
+    background: #333;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #444;
+}
+
+.btn-add-book {
+    background: transparent;
+    color: var(--accent-orange);
+    border: 2px solid var(--accent-orange);
+    border-radius: 12px;
+    padding: 10px 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-add-book:hover {
+    background: var(--accent-orange);
+    color: #000;
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.genre-tag {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    border: 1px solid #333;
+}
+
+/* Genre Specific Styles */
+.genre-stat-badge {
+    background: rgba(255, 102, 0, 0.1);
+    color: var(--accent-orange);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.add-genre-box {
+    background: #121212;
+    border: 1px dashed #444;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-genre-box:focus-within {
+    border-color: var(--accent-orange);
+    border-style: solid;
+}
+
+/* Order Management Specifics */
+.order-id-highlight {
+    color: var(--accent-orange);
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.status-order {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.status-paid {
+    background: rgba(0, 255, 127, 0.1);
+    color: #00ff7f;
+}
+
+.status-pending {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.status-refunded {
+    background: rgba(108, 117, 125, 0.1);
+    color: #adb5bd;
+}
+
+
+.modal-content .search-input-stylized {
+    background: #000; /* Darker than the modal bg to create depth */
+    border: 1px solid #444;
+}
+
+/* Author Management Specifics */
+.author-avatar-admin {
+    width: 45px;
+    height: 45px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.author-count-badge {
+    background: rgba(255, 102, 0, 0.15);
+    color: var(--accent-orange);
+    padding: 3px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgba(255, 102, 0, 0.3);
+}

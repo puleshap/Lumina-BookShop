@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library | Lumina Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" />
+</head>
+<body>
+
+<div id="global-header"></div>
+
+<main class="container py-5">
+    <div class="d-flex justify-content-between align-items-end mb-5">
+        <div>
+            <h2 class="fw-bold mb-1">My Digital Library</h2>
+            <p class="text-muted mb-0" id="count">You have 4 ebooks in your collection</p>
+        </div>
+<!--        <div class="d-none d-md-block">-->
+<!--            <button class="btn btn-outline-dark btn-sm">Sort by: Recent</button>-->
+<!--        </div>-->
+    </div>
+
+    <div id="book-show" class="row g-4">
+        <div class="mb-4">
+            <svg width="100" height="100" fill="#f8f9fa" class="bi bi-book-half" viewBox="0 0 16 16" style="color: #e9ecef;">
+                <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.883-.4 2.303-.837 3.896-.97 1.137-.096 2.446.045 3.424.577a.5.5 0 0 0 .416 0c.978-.532 2.287-.673 3.424-.576 1.593.132 3.013.569 3.896.97a.5.5 0 0 0 .707-.455v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.81 8.985.936 8 1.783z"/>
+            </svg>
+        </div>
+        <h3 class="fw-bold">Your library is empty</h3>
+        <p class="text-muted mx-auto" style="max-width: 400px;">
+            It looks like you haven't added any ebooks yet. Start exploring our collection to build your digital library.
+        </p>
+        <a href="search.html" class="btn btn-accent mt-3 px-5 py-2">Browse Books</a>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="assets/js/Library.js"></script>
+<script src="assets/js/notification.js"></script>
+<script src="assets/js/notiflix-aio-3.2.8.min.js"></script>
+<script src="assets/js/header2.js"></script>
+
+</body>
+</html>

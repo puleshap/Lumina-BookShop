@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Error - 500</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../Errors/Style.css">
+</head>
+<body class="error-page-body">
+<div class="error-container error-500">
+    <div class="error-icon"><i class="fa-solid fa-server"></i></div>
+    <div class="error-code">500</div>
+    <h3>Internal Server Error</h3>
+    <p class="error-message">
+        Internal Error took place during Inserting or Retrieving Data from the Database...Please try again later
+    </p>
+    <a href="../index.html" class="home-btn">Return to Home Page</a>
+</div>
+
+</body>
+<style>
+    /* error-style.css */
+    .error-page-body {
+        background-color: #f4f7f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .error-container {
+        text-align: center;
+        background: white;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        max-width: 500px;
+        width: 90%;
+    }
+
+    .error-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .error-500 .error-icon { color: #dc3545; } /* Red for Server Error */
+    .error-404 .error-icon { color: #ffc107; } /* Yellow for Not Found */
+
+    .error-code {
+        font-size: 5rem;
+        font-weight: 800;
+        color: #333;
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    .error-message {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .home-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .home-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</html>

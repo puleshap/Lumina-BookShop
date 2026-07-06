@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Invoice | Lumina Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" />
+</head>
+<body>
+
+<div id="global-header"></div>
+
+<main class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4 btn-print-group">
+        <a href="OrderList.html" class="btn btn-outline-secondary">
+            &larr; Back to Orders
+        </a>
+        <button class="btn btn-primary" onclick="window.print()">
+            Print Invoice
+        </button>
+    </div>
+
+    <div class="invoice-wrapper">
+        <div class="invoice-header d-flex justify-content-between align-items-start">
+            <div>
+                <div class="invoice-logo">LUMINA</div>
+                <p class="text-muted mb-0">Digital Bookstore Inc.<br>123 Tech Avenue, Colombo<br>Sri Lanka</p>
+            </div>
+            <div class="text-end">
+                <h2 class="fw-bold text-uppercase mb-1">Invoice</h2>
+                <p class="mb-0 fw-bold" id="inv">#LMN-982341</p>
+                <p class="text-muted" id="date">Issued: Feb 19, 2026</p>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-sm-6">
+                <div class="invoice-label">Billed To</div>
+                <p class="fw-bold mb-0" id="name">John Doe</p>
+                <p class="text-muted mb-0" id="email">john.doe@example.com</p>
+            </div>
+            <div class="col-sm-6 text-sm-end">
+                <div class="invoice-label">Payment Status</div>
+                <p class="text-success fw-bold">Successful </p>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-invoice align-middle">
+                <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th class="text-center">Qty</th>
+                    <th class="text-end">Purchase Price</th>
+                    <th class="text-end">Total</th>
+                </tr>
+                </thead>
+                <tbody id="table">
+                <tr>
+                    <td>
+                        <div class="fw-bold">The Great Gatsby (E-book)</div>
+                        <small class="text-muted">Format: PDF, EPUB</small>
+                    </td>
+                    <td class="text-center">1</td>
+                    <td class="text-end">$14.99</td>
+                    <td class="text-end">$14.99</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="fw-bold">Atomic Habits (E-book)</div>
+                        <small class="text-muted">Format: EPUB</small>
+                    </td>
+                    <td class="text-center">1</td>
+                    <td class="text-end">$12.50</td>
+                    <td class="text-end">$12.50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row justify-content-end mt-4">
+            <div class="col-sm-4">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Total Number of Items</span>
+                    <span id="count"></span>
+                </div>
+
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span class="fw-bold fs-5">Amount Paid</span>
+                    <span class="fw-bold fs-5 text-accent" id="total"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-5 border-top text-center">
+            <p class="text-muted small">Thank you for choosing Lumina Books. For support, please contact help@lumina.com.</p>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="assets/js/notification.js"></script>
+<script src="assets/js/notiflix-aio-3.2.8.min.js"></script>
+<script src="assets/js/loadInvoiceDetails.js"></script>
+<script src="assets/js/header2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.pagination .page-item .page-link {
+    color: #6c757d; /* Set the default color for pagination links */
+    background-color: #fff; /* Set the default background color */
+    border: none; /* Remove borders */
+    border-radius: 50%; /* Make them circular */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    display: flex; /* Center the content */
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content */
+    margin: 0 5px; /* Add some space between circles */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0657a8; /* Set the background color for active link */
+    color: #fff; /* Set the color for active link */
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #6c757d; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.pagination .page-item .page-link:focus {
+    box-shadow: none; /* Remove focus outline */
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    border-radius: 50%; /* Make arrows circular too */
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumina Admin | User Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/logo.png" />
+
+</head>
+<body class="admin-dashboard">
+
+<div class="d-flex">
+    <aside class="admin-sidebar">
+        <div class="sidebar-brand text-white">LUMINA<span style="color: var(--accent-orange)">.</span></div>
+        <nav class="flex-grow-1">
+            <a href="AdminDashboard.html" class="nav-item-stylized ">Dashboard</a>
+            <a href="AdminUserManagement.html" class="nav-item-stylized active">Users</a>
+            <a href="AdminAuthorManagement.html" class="nav-item-stylized ">Authors</a>
+            <a href="AdminGenreManagement.html" class="nav-item-stylized">Genres</a>
+            <a href="AdminBookManagement.html" class="nav-item-stylized">Books</a>
+            <a href="AdminOrderManagement.html" class="nav-item-stylized">Orders</a>
+        </nav>
+    </aside>
+
+    <main class="flex-grow-1" style="margin-left: 280px; padding: 50px;">
+        <header class="mb-5 d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="fw-bold mb-0">User Management</h1>
+                <p class="text-white">Monitor and manage registered customer accounts</p>
+            </div>
+            <div class="d-flex gap-3">
+                <input type="text" class="search-input-stylized" id="search" onchange="search();" placeholder="Search by name or email...">
+            </div>
+        </header>
+
+        <div class="mgmt-container shadow-lg">
+            <div class="mgmt-header">
+                <h5 class="fw-bold mb-0">Registered Users</h5>
+                <span class="text-white small" id="count"></span>
+            </div>
+
+            <table class="mgmt-table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User Details</th>
+                    <th>Status</th>
+                    <th>Registration Date</th>
+                    <th>Total Spent</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+                </thead>
+                <tbody id="table">
+
+                </tbody>
+            </table>
+
+            <div class="p-4 d-flex justify-content-center border-top border-dark">
+                <div class="d-flex gap-2" id="pagination">
+                    <button class="action-btn-circle" id="prevBtn">«</button>
+                    <button class="action-btn-circle" id="nextBtn">»</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="updateUserModal" tabindex="-1" aria-labelledby="updateUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark border border-secondary text-white rounded-4 shadow-lg">
+            <div class="modal-header border-0 p-4">
+                <h5 class="modal-title fw-bold" id="updateUserModalLabel">Update User Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 pb-4">
+                <form id="updateUserForm">
+                    <div class="mb-3">
+                        <label class="form-label text-muted small">First Name</label>
+                        <input type="text" class="search-input-stylized w-100" id="upd_fn">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted small">Last Name</label>
+                        <input type="text" class="search-input-stylized w-100" id="upd_ln">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted small">Email Address</label>
+                        <input type="email" class="search-input-stylized w-100" id="upd_email" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted small">Account Status</label>
+                        <select class="search-input-stylized w-100" id="statusSelect">
+                            <option value="Active">Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn w-100 mt-3 py-3 fw-bold"
+                            style="background: var(--accent-orange); color: black; border-radius: 12px;"
+                            onclick="saveUserChanges();">
+                        Save Changes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../assets/js/notification.js"></script>
+<script src="../assets/js/notiflix-aio-3.2.8.min.js"></script>
+<script src="../assets/js/Admin/AdminUserManagement.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details | Lumina Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" />
+</head>
+<body>
+
+<div id="global-header"></div>
+
+<main class="details-container">
+    <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item"><a href="search.html" class="text-decoration-none">Search</a></li>
+                <li class="breadcrumb-item active" id="breadcrumb-title"></li>
+            </ol>
+        </nav>
+
+        <div class="row g-5">
+            <div class="col-md-5">
+                <div class="details-img-holder">
+                    <img src="https://via.placeholder.com/400x600" alt="Book Cover" class="img-fluid" id="bookImage">
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <h1 id="bookTitle" class="display-5 fw-bold mb-2"></h1>
+                <p id="bookAuthor" class="fs-4 text-muted mb-4"></p>
+
+                <div class="d-flex align-items-center mb-4 gap-2">
+                    <span id="bookPrice" class="h2 fw-bold"></span>
+                    <span id="discountPrice" class="h2 fw-bold text-danger"></span>
+                </div>
+
+                <p class="text-secondary mb-5" id="bookDescription">
+                </p>
+
+                <div class="row g-3 mb-5">
+
+                    <div class="col-sm-12" id="add-cart">
+                        <button class="btn btn-accent btn-lg w-100" >Add to Cart</button>
+
+                    </div>
+                </div>
+
+                <!-- Feedback View Area with Scrollable Container -->
+                <div class="feedback-view-area">
+                    <h3 class="h4 fw-bold mb-4 border-bottom pb-2">User Feedback</h3>
+
+                    <!-- Added inline style max-height and overflow properties for handling massive review logs -->
+                    <div id="feedback-list-container"
+                         class="d-flex flex-column gap-3 overflow-y-auto pe-2"
+                         style="max-height: 200px; scroll-behavior: smooth;">
+
+                        <!-- Sample Placeholder Item 1 -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="related-section">
+    <div class="container">
+        <h3 class="section-title fw-bold">Books by the same Author</h3>
+
+        <div class="row g-4" id="author-book-section">
+
+        </div>
+    </div>
+</section>
+
+<section class="related-section">
+    <div class="container">
+        <h3 class="section-title fw-bold">Books You Might Also Like</h3>
+
+        <div class="row g-4" id="related-books-section">
+
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="feedbackModalLabel">Book Feedback</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+                <div class="modal-body" id="feedbackForm">
+
+
+                    <div class="mb-3">
+                        <label class="form-label d-block fw-bold">How was your experience?</label>
+                        <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="rating" id="ratingGood" value="1" autocomplete="off" checked>
+                            <label class="btn btn-outline-success" for="ratingGood">👍 Good</label>
+
+                            <input type="radio" class="btn-check" name="rating" id="ratingBad" value="2" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="ratingBad">👎 Bad</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label inversion for="feedbackText" class="form-label fw-bold">Your Comments</label>
+                        <textarea class="form-control" id="feedbackText" name="comment" rows="4" placeholder="Tell us what you thought about this book..." required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" onclick="applyfeeddback();" >Submit Feedback</button>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+
+
+
+<script src="assets/js/notification.js"></script>
+<script src="assets/js/notiflix-aio-3.2.8.min.js"></script>
+<script src="assets/js/book-details.js"></script>
+<script src="assets/js/header2.js"></script>
+
+<script src="assets/js/cart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

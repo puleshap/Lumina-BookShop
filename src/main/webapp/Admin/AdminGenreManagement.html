@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumina Admin | Genre Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/logo.png" />
+
+</head>
+<body class="admin-dashboard">
+
+<div class="d-flex">
+    <aside class="admin-sidebar">
+        <div class="sidebar-brand text-white">LUMINA<span style="color: var(--accent-orange)">.</span></div>
+        <nav class="flex-grow-1">
+            <a href="AdminDashboard.html" class="nav-item-stylized ">Dashboard</a>
+            <a href="AdminUserManagement.html" class="nav-item-stylized">Users</a>
+            <a href="AdminAuthorManagement.html" class="nav-item-stylized ">Authors</a>
+            <a href="AdminGenreManagement.html" class="nav-item-stylized active">Genres</a>
+            <a href="AdminBookManagement.html" class="nav-item-stylized">Books</a>
+            <a href="AdminOrderManagement.html" class="nav-item-stylized">Orders</a>
+        </nav>
+    </aside>
+
+    <main class="flex-grow-1" style="margin-left: 280px; padding: 50px;">
+        <header class="mb-5">
+            <h1 class="fw-bold mb-0">Genre Categories</h1>
+            <p class="text-white-50">Organize your library and manage book classifications</p>
+        </header>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="add-genre-box shadow-sm ">
+                    <h5 class="fw-bold mb-4">Create New Genre</h5>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Genre Name</label>
+                            <input type="text" class="search-input-stylized w-100" id="genre_name" placeholder="e.g. Science Fiction">
+                        </div>
+
+                        <button class="btn w-100 py-3 fw-bold" style="background: var(--accent-orange); color: black; border-radius: 12px;" onclick="addGenre();">
+                            Save Genre
+                        </button>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="mgmt-container shadow-lg">
+                    <div class="mgmt-header">
+                        <h5 class="fw-bold mb-0">Existing Categories</h5>
+                        <span class="text-white small" id="count">Total: 12 Genres</span>
+                    </div>
+
+                    <table class="mgmt-table">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Genre Name</th>
+                            <th>Total Books</th>
+                            <th>Created On</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="table">
+                        <tr>
+                            <td><span class="fw-bold text-white">Classic Fiction</span></td>
+                            <td><span class="genre-stat-badge">124 Books</span></td>
+                            <td class="text-muted small">Feb 15, 2026</td>
+                            <td class="text-end">
+                                <button class="action-btn-circle me-1" title="Edit">✎</button>
+                                <button class="action-btn-circle text-danger" title="Delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fw-bold text-white">Self-Help</span></td>
+                            <td><span class="genre-stat-badge">85 Books</span></td>
+                            <td class="text-muted small">Jan 22, 2026</td>
+                            <td class="text-end">
+                                <button class="action-btn-circle me-1" title="Edit">✎</button>
+                                <button class="action-btn-circle text-danger" title="Delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fw-bold text-white">Business & Finance</span></td>
+                            <td><span class="genre-stat-badge">210 Books</span></td>
+                            <td class="text-muted small">Feb 10, 2026</td>
+                            <td class="text-end">
+                                <button class="action-btn-circle me-1" title="Edit">✎</button>
+                                <button class="action-btn-circle text-danger" title="Delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fw-bold text-white">Science Fiction</span></td>
+                            <td><span class="genre-stat-badge">42 Books</span></td>
+                            <td class="text-muted small">Feb 18, 2026</td>
+                            <td class="text-end">
+                                <button class="action-btn-circle me-1" title="Edit">✎</button>
+                                <button class="action-btn-circle text-danger" title="Delete">🗑</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="p-4 d-flex justify-content-center border-top border-dark">
+                        <div class="d-flex gap-2" id="pagination">
+                            <button class="action-btn-circle" id="prevBtn">«</button>
+                            <button class="action-btn-circle" id="nextBtn">»</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="../assets/js/Admin/AdminGenreManagement.js"></script>
+<script src="../assets/js/notification.js"></script>
+<script src="../assets/js/notiflix-aio-3.2.8.min.js"></script>
+</body>
+</html>

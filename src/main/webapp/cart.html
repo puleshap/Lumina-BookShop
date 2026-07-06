@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Lumina Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" />
+</head>
+<body >
+
+<div id="global-header"></div>
+
+<main class="container py-5">
+
+    <div id="cart-items-wrapper" class="d-none">
+    <h2 class="fw-bold mb-4">Shopping Cart</h2>
+
+    <div class="row g-4" id="cart-items">
+        <div class="col-lg-8" id="cart-items-container">
+            <div class="cart-item d-md-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/80x110" class="cart-item-img me-3" alt="Book">
+                    <div>
+                        <h5 class="fw-bold mb-1">The Great Gatsby</h5>
+                        <p class="text-muted small mb-2">F. Scott Fitzgerald</p>
+                        <a href="#" class="remove-btn">Remove</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3 mt-md-0">
+                    <div class="quantity-control me-4">
+                        <input type="number" class="form-control" value="1" min="1">
+                    </div>
+                    <div class="text-end">
+                        <span class="fw-bold fs-5">$14.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-item d-md-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/80x110" class="cart-item-img me-3" alt="Book">
+                    <div>
+                        <h5 class="fw-bold mb-1">Atomic Habits</h5>
+                        <p class="text-muted small mb-2">James Clear</p>
+                        <a href="#" class="remove-btn">Remove</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3 mt-md-0">
+                    <div class="quantity-control me-4">
+                        <input type="number" class="form-control" value="1" min="1">
+                    </div>
+                    <div class="text-end">
+                        <span class="fw-bold fs-5">$12.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="summary-card shadow-sm">
+                <h4 class="fw-bold mb-4">Order Total</h4>
+
+                <hr>
+                <div class="d-flex justify-content-between mb-4">
+                    <span class=" fs-5">Total</span>
+                    <span class=" fs-5 text-accent" id="total-price"></span>
+                </div>
+                <button class="btn btn-accent btn-lg w-100 mb-3" id="payhere-payment" onclick="processcheckout();" >
+                    Proceed to Checkout
+                </button>
+                <a href="search.html" class="btn btn-outline-secondary w-100 mb-3 " >
+                    Continue Shopping
+                </a>
+                <br>
+                <button class="btn btn-outline-danger btn-lg w-100 mt-3 " onclick="clearCart();" data-bs-toggle="modal" data-bs-target="#clearCartModal">
+                    Clear All Items
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="empty-cart-state" class="d-none empty-cart-container shadow-sm">
+        <div class="empty-cart-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-bag-x" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+            </svg>
+        </div>
+
+        <h3>Your cart is feeling a bit light!</h3>
+        <p>Before you check out, you must add some books to your cart. You will find a lot of interesting books on our "Browse" page.</p>
+
+        <div class="d-flex justify-content-center gap-3">
+            <a href="search.html" class="btn btn-accent btn-lg px-5">Start Shopping</a>
+            <a href="index.html" class="btn btn-outline-secondary btn-lg px-5">Back to Home</a>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+
+
+
+<script src="assets/js/checkout.js"></script>
+<script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
+
+<script src="assets/js/notification.js"></script>
+<script src="assets/js/notiflix-aio-3.2.8.min.js"></script>
+<script src="assets/js/cart.js"></script>
+
+<script src="assets/js/checkout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="assets/js/header2.js"></script>
+
+</body>
+</html>

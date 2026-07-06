@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Books</title>
+
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <script defer src="assets/js/genreload.js"></script>
+</head>
+<body class="bg-dark text-white">
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">E-Book Store</h2>
+
+    <!-- Genre selector -->
+    <div class="mb-3">
+        <label class="form-label">Genre</label>
+        <select id="genreSelect" class="form-select bg-dark text-white">
+            <option value="0">All Genres</option>
+        </select>
+    </div>
+
+    <!-- Books table -->
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="bookTableBody">
+        <!-- Loaded dynamically -->
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

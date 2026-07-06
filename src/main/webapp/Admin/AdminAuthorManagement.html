@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumina Admin | Author Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/logo.png" />
+</head>
+<body class="admin-dashboard">
+
+<div class="d-flex">
+    <aside class="admin-sidebar">
+        <div class="sidebar-brand text-white">LUMINA<span style="color: var(--accent-orange)">.</span></div>
+        <nav class="flex-grow-1">
+            <a href="AdminDashboard.html" class="nav-item-stylized">Dashboard</a>
+            <a href="AdminUserManagement.html" class="nav-item-stylized">Users</a>
+            <a href="AdminAuthorManagement.html" class="nav-item-stylized active">Authors</a>
+
+            <a href="AdminGenreManagement.html" class="nav-item-stylized">Genres</a>
+            <a href="AdminBookManagement.html" class="nav-item-stylized">Books</a>
+            <a href="AdminOrderManagement.html" class="nav-item-stylized">Orders</a>
+        </nav>
+    </aside>
+
+    <main class="flex-grow-1" style="margin-left: 280px; padding: 50px;">
+        <header class="mb-5 d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="fw-bold mb-0">Author Directory</h1>
+                <p class="text-white-50">Manage the writers and creators in your library</p>
+            </div>
+            <div class="d-flex gap-3">
+                <input type="text" class="search-input-stylized" id="authorSearch" placeholder="Search by name..." onchange="search();">
+                <button class="btn btn-add-book" data-bs-toggle="modal" data-bs-target="#addAuthorModal">
+                    + Add Author
+                </button>
+            </div>
+        </header>
+
+        <div class="mgmt-container shadow-lg">
+            <div class="mgmt-header">
+                <h5 class="fw-bold mb-0">Registered Authors</h5>
+                <span class="text-white-50 small" id="count" >Showing authors in the system</span>
+            </div>
+
+            <table class="mgmt-table" >
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Author Profile</th>
+                    <th>Books Published</th>
+                    <th>Created On</th>
+
+                </tr>
+                </thead>
+                <tbody id="table">
+                <tr>
+                    <td>01</td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <div class="fw-bold text-white">F. Scott Fitzgerald</div>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td><span class="author-count-badge">12 Books</span></td>
+
+
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="p-4 d-flex justify-content-center border-top border-dark">
+                <div class="d-flex gap-2" id="pagination">
+                    <button class="action-btn-circle" id="prevBtn">«</button>
+                    <button class="action-btn-circle" id="nextBtn">»</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="modal fade" id="addAuthorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark border border-secondary text-white rounded-4 shadow-lg">
+            <div class="modal-header border-0 p-4">
+                <h5 class="modal-title fw-bold">Author Information</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 pb-4">
+
+                    <div class="mb-3">
+                        <label class="form-label text-white small"  >Full Name</label>
+                        <input type="text" class="search-input-stylized w-100" placeholder="E.g F. Scott Fitzgerald" id="author_name">
+                    </div>
+
+                    <button onclick="addAuthor();" class="btn w-100 mt-3 py-3 fw-bold" style="background: var(--accent-orange); color: black; border-radius: 12px;">
+                        Save Author
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/js/Admin/AdminAuthorManagement.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/notification.js"></script>
+<script src="../assets/js/notiflix-aio-3.2.8.min.js"></script>
+</body>
+</html>

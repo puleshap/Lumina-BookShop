@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(to bottom, #002d5b, #000000);
+    color: #ffffff;
+}
+
+a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00a6fb;
+}
+
+button,
+.bt {
+    background-color: #00b4d8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #00a6fb;
+}
+
+.button-green {
+    background-color: #28a745;
+    /* Brighter green */
+}
+
+.button-green:hover {
+    background-color: #218838;
+    /* Slightly darker green */
+}
+
+.header,
+.footer {
+    background-color: #002d5b;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.icon {
+    color: #00b4d8;
+}
+
+.input, select {
+background-color: #002d5b;
+color: #ffffff;
+border: 1px solid #00b4d8;
+padding: 5px 10px;
+margin: 5px 0;
+border-radius: 4px;
+transition: border-color 0.3s ease;
+}
+
+.input:hover,
+select:hover {
+    border-color: #00a6fb;
+}
+
+.container {
+    padding: 20px;
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Errors/error-404.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/Errors/error-500.html</location>
+    </error-page>
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/Errors/error-403.html</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/Errors/error-405.html</location>
+    </error-page>
+
+
+
+    <filter>
+        <filter-name>AdminAccessFilter</filter-name>
+        <filter-class>lk.GamerShop.Filters.AdminAccessFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminAccessFilter</filter-name>
+        <url-pattern>/Admin/AdminDashboard.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminAccessFilter</filter-name>
+        <url-pattern>/Admin/AdminAuthorManagement.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminAccessFilter</filter-name>
+        <url-pattern>/Admin/AdminBookManagement.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminAccessFilter</filter-name>
+        <url-pattern>/Admin/AdminGenreManagement.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminAccessFilter</filter-name>
+        <url-pattern>/Admin/AdminOrderManagement.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminAccessFilter</filter-name>
+        <url-pattern>/Admin/AdminUserManagement.html</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <filter-class>lk.GamerShop.Filters.CustomerAccessFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/cart.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/invoice.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/My-Library.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/OrderList.html</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/profile.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/payment-failed.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CustomerAccessFilter</filter-name>
+        <url-pattern>/payment-success.html</url-pattern>
+    </filter-mapping>
+
+
+</web-app>

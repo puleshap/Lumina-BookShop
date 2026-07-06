@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow-y: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.add-user {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-user:hover {
+    background-color: #0056b3;
+}
+
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 400px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.status {
+    color: green;
+    font-weight: bold;
+}
+.yellow {
+    color: yellow;
+    font-weight: bold;
+}
+
+.status-red {
+    color: red;
+    font-weight: bold;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+}
+
+.media-body {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.mr-3 {
+    margin-right: 1rem !important;
+}
