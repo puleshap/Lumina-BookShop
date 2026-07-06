@@ -9,7 +9,7 @@ import java.util.Locale;
 public class PayHereUtil {
 
     private static final String MERCHANT_ID = "1222039";
-    private static final String MERCHANT_SECRET = "NDEyNjI2NjAwMTMzMTYyMDQ1NTE2NTYxNTc5MDgyMzE4MzQzNjc3";
+    private static final String MERCHANT_SECRET = "YOUR_MERCHANT_SECRET";
     public static String getMerchantId() {
         return MERCHANT_ID;
 
